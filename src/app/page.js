@@ -60,7 +60,7 @@ const schema = z
       // if user tick "I have coupon" and fill correct code, then it's ok too
       if (data.hasCoupon && data.coupon === "CMU2023") return true;
       // ticking "I have coupon" but fill wrong coupon code, show error
-      if (data.hasCoupon && data.coupon !== "CMU2023") return false;
+      return false;
     },
     //set error message and the place it should show
     {
